@@ -6,7 +6,7 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:03:55 by lcesbron          #+#    #+#             */
-/*   Updated: 2026/01/15 18:41:37 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2026/01/16 19:23:03 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,17 @@ ClapTrap::ClapTrap(std::string name): _name(name),
 	std::cout << "ClapTrap name constructor called" << std::endl;
 }
 
+ClapTrap::ClapTrap(std::string name,
+					size_t hit_points,
+					size_t energy_points,
+					size_t attack_damage) : _name(name),
+											_hit_points(hit_points),
+											_energy_points(energy_points),
+											_attack_damage(attack_damage)
+{
+	std::cout << "ClapTrap full spec constructor called" << std::endl;
+}
+
 ClapTrap::ClapTrap(ClapTrap const &toCopy)
 {
 	std::cout << "ClapTrap copy constructor called" << std::endl;
@@ -37,7 +48,7 @@ ClapTrap::ClapTrap(ClapTrap const &toCopy)
 	this->_attack_damage = toCopy._attack_damage;
 }
 
-CFapTrap	&ClapTrap::operator=(ClapTrap const &toCopy)
+ClapTrap	&ClapTrap::operator=(ClapTrap const &toCopy)
 {
 	std::cout << "ClapTrap = operator overload called" << std::endl;
 	if (this != &toCopy)
