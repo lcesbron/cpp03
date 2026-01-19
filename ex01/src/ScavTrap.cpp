@@ -58,7 +58,7 @@ void	ScavTrap::attack(const std::string &target)
 	}
 }
 
-void ScavTrap::guardGate(void) const
+void ScavTrap::guardGate(void)
 {
 	if (this->_hit_points <= 0)
 		std::cout << "ScavTrap " << this->_name << " is dead" << std::endl;

@@ -16,10 +16,14 @@ int	main(void)
 {
 	ScavTrap	b("Bonjour");
 
-	b.attack("Toi");
-	b.takeDamage(5);
-	b.beRepaired(3);
-	b.takeDamage(8);
-	b.takeDamage(8);
-	b.guardGate();
+	ClapTrap*	clap = new ClapTrap[2];
+
+	clap[0] = b;
+	clap[0].attack("toi");
+	// b.attack("Toi");
+	// b.takeDamage(5);
+	// b.beRepaired(3);
+	// b.takeDamage(8);
+	// b.takeDamage(8);
+	// b.guardGate();
 }

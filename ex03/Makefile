@@ -3,7 +3,7 @@ NAME	=			diamond
 #		UTILS
 
 CXX			=		c++
-CXXFLAGS	=		-Wall -Wextra -Wshadow-Wshadow  -Werror -std=c++98
+CXXFLAGS	=		-Wall -Wextra -Wshadow  -Werror -std=c++98
 CPPFLAGS	=		$(addprefix -I, $(INCLUDE_DIR)) -MD -MP -MF
 
 RM			=		rm -rf
