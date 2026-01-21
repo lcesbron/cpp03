@@ -37,7 +37,7 @@ ClapTrap::ClapTrap(ClapTrap const &toCopy)
 	this->_attack_damage = toCopy._attack_damage;
 }
 
-CFapTrap	&ClapTrap::operator=(ClapTrap const &toCopy)
+ClapTrap	&ClapTrap::operator=(ClapTrap const &toCopy)
 {
 	std::cout << "ClapTrap = operator overload called" << std::endl;
 	if (this != &toCopy)
