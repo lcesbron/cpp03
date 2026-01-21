@@ -62,4 +62,3 @@ void DiamondTrap::whoAmI(void)
 		--this->_energy_points;
 	}
 }
-

@@ -20,10 +20,12 @@ int	main(void)
 
 	clap[0] = b;
 	clap[0].attack("toi");
-	// b.attack("Toi");
-	// b.takeDamage(5);
-	// b.beRepaired(3);
-	// b.takeDamage(8);
-	// b.takeDamage(8);
-	// b.guardGate();
+	b.attack("Toi");
+	b.takeDamage(5);
+	b.beRepaired(3);
+	b.takeDamage(8);
+	b.takeDamage(8);
+	b.guardGate();
+
+	delete[] clap;
 }
