@@ -22,9 +22,12 @@ class ScavTrap: virtual public ClapTrap
 		ScavTrap(std::string name);
 		ScavTrap(ScavTrap const &toCopy);
 		~ScavTrap(void);
-		ScavTrap	&operator=(ScavTrap const &toCopy);
-		void	attack(const std::string &target);
-		void guardGate(void);
+		ScavTrap		&operator=(ScavTrap const &toCopy);
+		static size_t	baseHitPoints();
+		static size_t	baseEnergyPoints();
+		static size_t	baseAttackDamage();
+		void			attack(const std::string &target);
+		void			guardGate(void);
 };
 
 #endif

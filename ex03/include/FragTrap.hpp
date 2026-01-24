@@ -14,6 +14,7 @@
 # define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
+#include <cstddef>
 
 class FragTrap: virtual public ClapTrap
 {
@@ -22,7 +23,10 @@ class FragTrap: virtual public ClapTrap
 		FragTrap(std::string name);
 		FragTrap(FragTrap const &toCopy);
 		~FragTrap(void);
-		FragTrap	&operator=(FragTrap const &toCopy);
+		FragTrap		&operator=(FragTrap const &toCopy);
+		static size_t	baseHitPoints();
+		static size_t	baseEnergyPoints();
+		static size_t	baseAttackDamage();
 		void	attack(const std::string &target);
 		void	highFivesGuys(void);
 };

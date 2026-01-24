@@ -72,3 +72,6 @@ void FragTrap::highFivesGuys(void)
 	}
 }
 
+size_t	FragTrap::baseHitPoints() {return (100);}
+size_t	FragTrap::baseEnergyPoints() {return (100);}
+size_t	FragTrap::baseAttackDamage() {return (30);}

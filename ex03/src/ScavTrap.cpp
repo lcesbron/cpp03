@@ -72,3 +72,6 @@ void ScavTrap::guardGate(void)
 	}
 }
 
+size_t	ScavTrap::baseHitPoints() {return (100);}
+size_t	ScavTrap::baseEnergyPoints() {return (50);}
+size_t	ScavTrap::baseAttackDamage() {return (20);}

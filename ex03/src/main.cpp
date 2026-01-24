@@ -26,6 +26,7 @@ int	main(void)
 	DiamondTrap	b("Bonjour");
 
 	printDiamondInfo(b);
+	b.attack("toi");
 	b.highFivesGuys();
 	b.whoAmI();
 }
