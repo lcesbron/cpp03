@@ -12,10 +12,20 @@
 
 #include "DiamondTrap.hpp"
 
+static void	printDiamondInfo(DiamondTrap const& diamond)
+{
+	std::cout << "name : " << diamond.getName() << std::endl;
+	std::cout << "ClapTrap name : " << diamond.ClapTrap::getName() << std::endl;
+	std::cout << "hit points : " << diamond.getHitPoints() << std::endl;
+	std::cout << "energy points : " << diamond.getEnergyPoints() << std::endl;
+	std::cout << "attack damage : " << diamond.getAttackDamage() << std::endl;
+}
+
 int	main(void)
 {
 	DiamondTrap	b("Bonjour");
 
+	printDiamondInfo(b);
 	b.highFivesGuys();
 	b.whoAmI();
 }

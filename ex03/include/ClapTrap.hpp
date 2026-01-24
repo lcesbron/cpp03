@@ -29,6 +29,10 @@ class ClapTrap
 		ClapTrap(ClapTrap const &toCopy);
 		~ClapTrap(void);
 		ClapTrap	&operator=(ClapTrap const &toCopy);
+		virtual std::string const&	getName(void) const;
+		size_t const&		getHitPoints(void) const;
+		size_t const&		getEnergyPoints(void) const;
+		size_t const&		getAttackDamage(void) const;
 		void	attack(const std::string &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);

@@ -25,6 +25,7 @@ class DiamondTrap: public ScavTrap, public FragTrap
 		DiamondTrap(std::string name);
 		DiamondTrap(DiamondTrap const &toCopy);
 		~DiamondTrap(void);
+		virtual std::string const&	getName(void) const;
 		DiamondTrap	&operator=(DiamondTrap const &toCopy);
 		void	whoAmI(void);
 };

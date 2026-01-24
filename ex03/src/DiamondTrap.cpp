@@ -12,16 +12,24 @@
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void): ClapTrap("default_clap_name", 100, 100, 30)
+DiamondTrap::DiamondTrap(void)
 {
 	std::cout << "DiamondTrap default constructor called" << std::endl;
 	this->_name = "default";
+	this->ClapTrap::_name = "default_clap_name";
+	this->_hit_points = FragTrap::_hit_points;
+	this->_energy_points = ScavTrap::_energy_points;
+	this->_attack_damage = FragTrap::_attack_damage;
 }
 
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name", 100, 100, 30)
 {
 	std::cout << "DiamondTrap name constructor called" << std::endl;
 	this->_name = name;
+	this->ClapTrap::_name = this->_name + "_clap_name";
+	this->_hit_points = FragTrap::_hit_points;
+	this->_energy_points = ScavTrap::_energy_points;
+	this->_attack_damage = FragTrap::_attack_damage;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const &toCopy)
@@ -47,6 +55,11 @@ DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &toCopy)
 		this->_attack_damage = toCopy._attack_damage;
 	}
 	return (*this);
+}
+
+std::string const&	DiamondTrap::getName(void) const
+{
+	return (this->_name);
 }
 
 void DiamondTrap::whoAmI(void)
